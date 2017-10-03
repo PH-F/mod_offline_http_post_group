@@ -42,13 +42,13 @@ mod_opt_type(_) ->
 
 muc_filter_message(Pkt, #state{config = Config, jid = RoomJID} = MUCState, FromNick) ->
   From = xmpp:get_from(Pkt),
-
-  %% loop through room members
-  %% if is-offline
-  %% post_offline_message(From, _To, Body, Packet#message.id);
-  %% end..
-
   ?INFO_MSG("muc_filter_message called.", []).
+
+%% loop through room members
+%% if is-offline
+%% post_offline_message(From, _To, Body, Packet#message.id);
+%% end..
+
 
 
 %%post_offline_message(From, To, Body, MessageId) ->
